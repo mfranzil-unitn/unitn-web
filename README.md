@@ -22,6 +22,13 @@ You can find the following material in the repo:
 
 * Codici/ - Code made during labs.
 
+## Mirrors
+
+You can find mirrors of this repo here:
+
+* [GitHub](https://github.com/mfranzil/WebUniTN)
+* [GitLab](https://gitlab.com/mfranzil/webunitn)
+
 ## Authors
 
 * **Matteo Franzil** - *Initial work* - [mfranzil](https://github.com/mfranzil)
