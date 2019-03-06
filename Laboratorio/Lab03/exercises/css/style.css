@@ -1,0 +1,26 @@
+#tagline {
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.def {
+    min-height: 200px;
+}
+.full {
+    height: 600px;
+}
+.container div {
+    padding: 0px;
+}
+
+.content {
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    border: black 1px solid;
+}

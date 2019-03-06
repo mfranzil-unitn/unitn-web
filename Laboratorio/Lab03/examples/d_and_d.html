@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drag &and; Drop Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #div1 {
+                width: 350px;
+                height: 70px;
+                padding: 10px;
+                border: 1px solid #FF0000;
+            }
+        </style>
+        <script type="text/javascript">
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            function drag(ev) {
+                ev.dataTransfer.setData("Text", ev.target.id);
+            }
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("Text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <img id="drag1" alt="img_logo" src="images/HTML5_CSS3_JS.png" draggable="true" ondragstart="drag(event)" width="69" height="62">
+        <div id="geoLocationLink">
+            <a href="geo.html">Go to GeoLocation Example</a>
+        </div>
+        <div id="wwLink">
+            <a href="ww.html">Go to Web Worker Example</a>
+        </div>
+    </body>
+</html>

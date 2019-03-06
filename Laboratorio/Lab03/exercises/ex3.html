@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This meta tags makes sure accents and other special characters are display correctly -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!-- The title of the page (displayed on the tab of the browser) -->
+        <title>Exercise 3. Bootstrap Grids</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <!--
+        We reference bootstrap stylesheets. Notice that we reference the "online" version,
+        the one in their content distribution network. If you download bootstrap,
+        then you should reference the one in your local system.
+        -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+        <!--
+        You can also override some of the styles that come by default, or create new ones.
+        These extensions should go in a separate files to make sure we don't lose them
+        if we update the bootstrap version in the future.
+        Note: Bootstrap also offers the "source code" in *less* to facilitate extensions,
+        but that's outside the scope of this course.
+        -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- This is the main container of the entire page -->
+        <div class="container">
+            <h1>Bartlett</h1>
+            <div class="row">
+                <div class="col-4">
+                    <div class="content"></div>
+                </div>
+                <div class="col-8">
+                    <div class="row def">
+                        <div class="col-12">
+                            <div class="content"></div>
+                        </div>
+                    </div>
+                    <div class="row full">
+                        <div class="col-6">
+                            <div class="content"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h1>Bryant</h1>
+            <div class="row def">
+                <div class="col-3"><div class="content"></div></div>
+                <div class="col-9"><div class="content"></div></div>
+            </div>
+        </div>
+        
+        <!-- Direct link to last version of JQuery JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!-- Direct link to last version of Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

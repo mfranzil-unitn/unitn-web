@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This meta tags makes sure accents and other special characters are display correctly -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!-- The title of the page (displayed on the tab of the browser) -->
+        <title>Exercise 4. Forms</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--
+        We reference bootstrap stylesheets. Notice that we reference the "online" version,
+        the one in their content distribution network. If you download bootstrap,
+        then you should reference the one in your local system.
+        -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+
+        <!--
+        You can also override some of the styles that come by default, or create new ones.
+        These extensions should go in a separate files to make sure we don't lose them
+        if we update the bootstrap version in the future.
+        Note: Bootstrap also offers the "source code" in *less* to facilitate extensions,
+        but that's outside the scope of this course.
+        -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- This is the main container of the entire page -->
+        <div class="container">
+            <div class="row">
+            <div id="formAlert" class="alert alert-danger alert-dismissible fade show col-12" role="alert">
+                <h4 class="alert-heading">Error</h4>
+                Check the form fields!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-2">
+                        <div class="form-group">
+                            <label for="ititle">Title</label>
+                            <input type="text" class="form-control" id="ititle" placeholder="Mr.">
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form-group">
+                            <label for="ifname">First name</label>
+                            <input type="text" class="form-control" id="ifname" placeholder="first name here">
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form-group">
+                            <label for="ilname">Last name</label>
+                            <input type="text" class="form-control" id="ilname" placeholder="last name here">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="igender">Gender</label>
+                            <select class="form-control" id="igender">
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="ibirth">Date of Birth</label>
+                            <input type="date" class="form-control" id="ibirth" placeholder="Date of birth">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="iaddress">Address</label>
+                            <input type="text" class="form-control" id="iaddress" placeholder="Address here">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 form-group">
+                        <input type="text" class="form-control" id="icity" placeholder="City here">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="istate" placeholder="State here">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 form-group">
+                        <input type="text" class="form-control" id="ipostcode" placeholder="Post code here">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="icountry" placeholder="Country here">
+                    </div>
+                </div>
+                <hr>
+                <div class="row justify-content-end">
+                    <button type="button" class="col-4 btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+        <!-- Direct link to last version of JQuery JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
