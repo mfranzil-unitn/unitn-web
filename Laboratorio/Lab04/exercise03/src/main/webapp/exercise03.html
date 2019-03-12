@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Servlets and forms: Exercise 03</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <form action="ServletEx3" method="POST">
+            <b>Select the subjects you would to take this year:</b><br><br>
+            <input type="checkbox" name="Subjects" value="Maths" checked="checked">Maths
+            <input type="checkbox" name="Subjects" value="Physics" checked="checked">Physics
+            <input type="checkbox" name="Subjects" value="Chemistry" checked="checked">Chemistry
+            <br><br>
+            <b>Select the possible trimesters in which you would to take them:</b><br><br>
+            <input type="checkbox" name="Trimesters" value="First" checked="checked">First
+            <input type="checkbox" name="Trimesters" value="Second" checked="checked">Second
+            <input type="checkbox" name="Trimesters" value="Third" checked="checked">Third
+            <input type="checkbox" name="Trimesters" value="Fourth" checked="checked">Fourth
+            <input type="submit" value="Select Subjects">
+        </form>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
