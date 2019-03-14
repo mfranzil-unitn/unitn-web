@@ -2,6 +2,7 @@ Materiale/
 Slide/
 Libri PDF/
 .idea/
+target/
 *.iml
 
 # Compiled class file
