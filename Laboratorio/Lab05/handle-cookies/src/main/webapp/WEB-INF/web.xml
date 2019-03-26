@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ShowCookies</servlet-name>
+        <servlet-class>it.unitn.disi.wp.lab05.exercise01.ShowCookies</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SetCookies</servlet-name>
+        <servlet-class>it.unitn.disi.wp.lab05.exercise01.SetCookies</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteCookies</servlet-name>
+        <servlet-class>it.unitn.disi.wp.lab05.exercise01.DeleteCookies</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowCookies</servlet-name>
+        <url-pattern>/ShowCookies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SetCookies</servlet-name>
+        <url-pattern>/SetCookies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteCookies</servlet-name>
+        <url-pattern>/DeleteCookies</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
