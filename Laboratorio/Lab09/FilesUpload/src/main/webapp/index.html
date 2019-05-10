@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 09: Upload examples</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    </head>
+    <body>
+        <form action="upload.html" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="submitterId">What is your name?</label><input class="form-control" id="submitterId" name="submitter" type="text"><br>
+            </div>
+            <div class="form-group">
+                <label for="file1Id">Which file to load?</label><input class="form-control-file" id="file1Id" name="file1" type="file"><br>
+            </div>
+            <div class="form-group">
+                <label for="file2Id">Which file to load?</label><input class="form-control-file" id="file2Id" name="file2" type="file"><br>
+            </div>
+            <div class="form-group">
+                <label for="file3Id">Which file to load?</label><input class="form-control-file" id="file3Id" name="file3" type="file"><br>
+            </div>
+            <div class="form-group">
+                <label for="multiplefilesId">Multiple file?</label><input class="form-control-file" id="multiplefilesId" name="multiplefiles" type="file" multiple><br>
+            </div>
+            <input type="submit" name="Send">
+        </form>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
