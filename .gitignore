@@ -4,6 +4,7 @@ Libri PDF/
 .idea/
 target/
 *.iml
+Progetto/*.pdf
 
 # Compiled class file
 *.class
