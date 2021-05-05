@@ -1,0 +1,2372 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[height=10in,a4paper,hmargin=0.25cm]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+%\usepackage{listings}
+%\usepackage{mathtools}
+%\usepackage[mathletters]{ucs}
+%\usepackage[table,xcdraw]{xcolor}
+%\usepackage[hidelinks]{hyperref}
+%\usepackage{booktabs}
+%\usepackage{wrapfig}
+%\usepackage{caption}
+%\usepackage{graphicx}
+%\usepackage{fancyvrb}
+%\usepackage{tikz}
+
+%\lstset{
+%basicstyle=\small\ttfamily,
+%columns=flexible,
+%breaklines=true
+%}
+
+%\newcommand\filledcirc{{\color{red}\bullet}\mathllap{\circ}}
+
+%\setlength{\parskip}{0.01mm}
+\linespread{0.8}
+\title{NoWeb}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+    \item SESSIONI: Quando viene cancellato il sessionstorage?
+          \begin{itemize}
+              \item[$\bigcirc$] mai
+              \item[$\bigcirc$] solo da javascript
+              \item[$\bigcirc$] quando chiudo la sessione
+              \item[$\bigcirc$] quando chiudo il tab
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: Il sessionStorage e' utile per il session tracking dell'utente se il browser e' HTML4.01?
+          \begin{itemize}
+              \item[$\bigcirc$] no mai
+              \item[$\bigcirc$] si se uso le sessioni
+              \item[$\bigcirc$] si sempre
+              \item[$\bigcirc$] si se ho javascript
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: chi puo' accedere al SessionStorage
+          \begin{itemize}
+              \item[$\bigcirc$] Sia il client che il server
+              \item[$\bigcirc$] solo il client
+              \item[$\bigcirc$] solo il server
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: il localstorage e' un posto sicuro per conservare I dati?
+          \begin{itemize}
+              \item[$\bigcirc$] No mai
+              \item[$\bigcirc$] Si se uso https come protocollo di comunicazione
+              \item[$\bigcirc$] si sempre
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: La dimensione del SessionStorage:
+          \begin{itemize}
+              \item[$\bigcirc$] Dipende dal browser (tipo e versione) e dall'hradware
+              \item[$\bigcirc$] Dipende dal browser (tipo, non dalla versione) e dall'hardware
+              \item[$\bigcirc$] Dipende dal device
+              \item[$\bigcirc$] dipende dal solo browser
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: Se il browser che sto utilizzando e' HTML4.1 posso usare il SessionStorage?
+          \begin{itemize}
+              \item[$\bigcirc$] si
+              \item[$\bigcirc$] no
+              \item[$\bigcirc$] solo se javascript e' abilitato
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: Se il browser che sto utilizzando e' HTML4.1 posso usare il LocalStorage?
+          \begin{itemize}
+              \item[$\bigcirc$] si
+              \item[$\bigcirc$] no
+              \item[$\bigcirc$] solo se javascript e' abilitato
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: quale e' il massimo datasize per Il LocalStorage?
+          \begin{itemize}
+              \item[$\bigcirc$] 4kB
+              \item[$\bigcirc$] 5 MB
+              \item[$\bigcirc$] non c'e' limite
+              \item[$\bigcirc$] 2MB
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI/COOKIES: quale e' il massimo datasize per I cookies?
+          \begin{itemize}
+              \item[$\bigcirc$] 4kB
+              \item[$\bigcirc$] 5 MB
+              \item[$\bigcirc$] non c'e' limite
+              \item[$\bigcirc$] 2MB
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Servlet: cosa fa il metodo RequestDispatcher
+          \begin{itemize}
+              \item[$\bigcirc$] manda la request ad un'altra risorsa del server
+              \item[$\bigcirc$] attua un redirect ad altra risorsa
+              \item[$\bigcirc$] non esiste il metodo
+              \item[$\bigcirc$] parsa la richiesta restituendo I parametri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SERVLET: se una sessione scade per inattivita' cosa succede al prossimo click sulla pagina?
+          \begin{itemize}
+              \item[$\bigcirc$] Mi dara' 404 not found
+              \item[$\bigcirc$] dipende dall'applicazione
+              \item[$\bigcirc$] mi riporta al login
+              \item[$\bigcirc$] le sessioni scadono solo se faccio logout
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SERVLET: HttpServletRequest.getSesssion(true) e' un metodo che
+          \begin{itemize}
+              \item[$\bigcirc$] permette di creare una sessione se non esisteva
+              \item[$\bigcirc$] permette di creare una sessione se una sessione esisteva comunque
+              \item[$\bigcirc$] permette di continuare senza creare la sessione
+              \item[$\bigcirc$] e' un metodo che non esiste
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SERVLET la lettura dei cookies con request.getCookies() ritorna (request e' la request passata)
+          \begin{itemize}
+              \item[$\bigcirc$] un array di oggetti Cookie
+              \item[$\bigcirc$] una lista di oggetti Cookie
+              \item[$\bigcirc$] una hash di Oggetti Cookie
+              \item[$\bigcirc$] Una collection di oggetti Cookie
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item il valore di un cookie puo' essere cifrato dal browser prima di essere salvato localmente?
+          \begin{itemize}
+              \item[$\bigcirc$] no mai
+              \item[$\bigcirc$] Si , ma dal server
+              \item[$\bigcirc$] si dal client
+              \item[$\bigcirc$] solo se uso https
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item COOKIES: con le api java posso settare una data di validita' negativa?
+          \begin{itemize}
+              \item[$\bigcirc$] no mai
+              \item[$\bigcirc$] si sempre
+              \item[$\bigcirc$] solo se la sessione e' gia' iniziata
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item I cookies sono sicuri lato client
+          \begin{itemize}
+              \item[$\bigcirc$] no mai
+              \item[$\bigcirc$] si se nessuno guarda lo schermo mentre navigo
+              \item[$\bigcirc$] si se uso una sesssione anonima
+              \item[$\bigcirc$] si se uso https
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: indicare I metodi per fare session tracking
+          \begin{itemize}
+              \item[$\Box$] url rwrite
+              \item[$\Box$] Hidden fields
+              \item[$\Box$] cookies+sessions
+              \item[$\Box$] web storage
+              \item[$\Box$] Local storage
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: Le sessioni da chi sono generate?
+          \begin{itemize}
+              \item[$\bigcirc$] dal server
+              \item[$\bigcirc$] dal client
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SESSIONI: I dati per la gestione della sessione dove sono memorizzate?
+          \begin{itemize}
+              \item[$\bigcirc$] sul client
+              \item[$\bigcirc$] sul server
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item I cookies dove sono memorizzati?
+          \begin{itemize}
+              \item[$\bigcirc$] sul client
+              \item[$\bigcirc$] sul server
+              \item[$\bigcirc$] sul client e sul server
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item I cookies dove sono generati?
+          \begin{itemize}
+              \item[$\bigcirc$] sul server
+              \item[$\bigcirc$] sul client
+              \item[$\bigcirc$] dal browser
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item il protocollo http versione 1.2 si differenzia rispotto al 1.1 per
+          \begin{itemize}
+              \item[$\bigcirc$] sintassi diversa
+              \item[$\bigcirc$] supportare connessioni N:1 per connesione lato client
+              \item[$\bigcirc$] supportare connessioni N:1 per connesione lato server
+              \item[$\bigcirc$] non esiste il protocollo v1.1
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare queli dei seguenti sono modelli di cloud computing
+          \begin{itemize}
+              \item[$\Box$] PAAS
+              \item[$\Box$] SAAS
+              \item[$\Box$] IAAS
+              \item[$\Box$] CAAS
+              \item[$\Box$] AIAS
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare le caratteristiche del cloud computing
+          \begin{itemize}
+              \item[$\Box$] ondemand selfservice
+              \item[$\Box$] resource pooling
+              \item[$\Box$] rapid elasticity
+              \item[$\Box$] Resourceless
+              \item[$\Box$] REST SoA
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare I principali protocolli web per scambio dati nei web services
+          \begin{itemize}
+              \item[$\Box$] SOAP
+              \item[$\Box$] JSON
+              \item[$\Box$] PSON
+              \item[$\Box$] XHTTP
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare I principali protocolli web per scambio dati nei web services
+          \begin{itemize}
+              \item[$\Box$] XML
+              \item[$\Box$] SOAP
+              \item[$\Box$] JSON
+              \item[$\Box$] SAP
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare I principali protocolli web per scambio dati nei web services
+          \begin{itemize}
+              \item[$\Box$] XML
+              \item[$\Box$] SOAP
+              \item[$\Box$] JSON
+              \item[$\Box$] RESTFULL
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare I design principles dei servizi SOA
+          \begin{itemize}
+              \item[$\Box$] Abstraction
+              \item[$\Box$] Autonomy
+              \item[$\Box$] Stateless
+              \item[$\Box$] Location
+              \item[$\Box$] availability
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare I design principles dei servizi SOA
+          \begin{itemize}
+              \item[$\Box$] Abstraction
+              \item[$\Box$] Autonomy
+              \item[$\Box$] Stateless
+              \item[$\Box$] Durability
+              \item[$\Box$] availability
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare I design principles dei servizi SOA
+          \begin{itemize}
+              \item[$\Box$] reusability
+              \item[$\Box$] Dynamics
+              \item[$\Box$] Stateless
+              \item[$\Box$] Durability
+              \item[$\Box$] availability
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare I design principles dei servizi SOA
+          \begin{itemize}
+              \item[$\Box$] Discoverability
+              \item[$\Box$] Location
+              \item[$\Box$] Interoperability
+              \item[$\Box$] Durability
+              \item[$\Box$] availability
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item un servizio che restituisca I limiti geografici di una citta' e' un servizio SOA?
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] No
+              \item[$\bigcirc$] dipende dal server
+              \item[$\bigcirc$] dipende dal database
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item un servizio che restituisca I negozi di scarpe vicini alla posizione data e' un servizio SOA?
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] No
+              \item[$\bigcirc$] dipende dal server
+              \item[$\bigcirc$] dipende dal database
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item un servizio che restituisca il codice CAP e' un servizio SOA?
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] No
+              \item[$\bigcirc$] dipende dal server
+              \item[$\bigcirc$] dipende dal database
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item in un servizio SOA l'autosufficienza esprime l'indipendeza da
+          \begin{itemize}
+              \item[$\bigcirc$] Prodotto
+              \item[$\bigcirc$] prodotto e fornitore
+              \item[$\bigcirc$] prodotto e tecnologia
+              \item[$\bigcirc$] fornitore e tecnologia
+              \item[$\bigcirc$] prodotto fornitore e tecnologia
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item un servizio SOA qualeli caratteristiche presenta?
+          \begin{itemize}
+              \item[$\Box$] ben Definito
+              \item[$\Box$] Autosufficiente
+              \item[$\Box$] CauseBox
+              \item[$\Box$] dipendente dai parametri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item un servizio SOA quali caratteristiche presenta?
+          \begin{itemize}
+              \item[$\Box$] ben Definito
+              \item[$\Box$] Autosufficiente
+              \item[$\Box$] blackbox
+              \item[$\Box$] dipendente dai parametri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item una web architecture cgi e' considerata a quanti tier?
+          \begin{itemize}
+              \item[$\bigcirc$] 2
+              \item[$\bigcirc$] 3
+              \item[$\bigcirc$] 4
+              \item[$\bigcirc$] 1
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Se compero un certificato per www.esse3.unitn.it esso vale anche per:
+          \begin{itemize}
+              \item[$\bigcirc$] http://www.esse3.unitn.it
+              \item[$\bigcirc$] esse3.unitn.it
+              \item[$\bigcirc$] *.www.esse3.unitn.it
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: Indicare quali sono certificati SSL web
+          \begin{itemize}
+              \item[$\Box$] Extendend Validation SSL
+              \item[$\Box$] Standard Validation SSL
+              \item[$\Box$] Self Signed SSL
+              \item[$\Box$] Safe SSL
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item I certificati SSL di tipo "Standard Validation" hanno il luccehtto verde?
+          \begin{itemize}
+              \item[$\bigcirc$] si
+              \item[$\bigcirc$] no
+              \item[$\bigcirc$] dipende dal gestore del certificato
+              \item[$\bigcirc$] Non esiste questo tipo di certificato
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item un certificato HTTPS che durata puo' avere?
+          \begin{itemize}
+              \item[$\bigcirc$] Dipende dal tipo
+              \item[$\bigcirc$] massimo 1 anno
+              \item[$\bigcirc$] massimo 2 anni
+              \item[$\bigcirc$] massimo 5 anni
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il protocollo HTTPS e' considerato sicuro?
+          \begin{itemize}
+              \item[$\bigcirc$] No MAI
+              \item[$\bigcirc$] No se e' wireless
+              \item[$\bigcirc$] Si Sempre
+              \item[$\bigcirc$] Si se sono collegato via cavo alla rete
+              \item[$\bigcirc$] Si se ho un antivirus
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il protocollo HTTP e' considerato sicuro?
+          \begin{itemize}
+              \item[$\bigcirc$] No MAI
+              \item[$\bigcirc$] No se e' wireless
+              \item[$\bigcirc$] Si Sempre
+              \item[$\bigcirc$] Si se sono collegato via cavo alla rete
+              \item[$\bigcirc$] Si se ho un antivirus
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa lo status code HTTP 604
+          \begin{itemize}
+              \item[$\bigcirc$] Success
+              \item[$\bigcirc$] Redirect
+              \item[$\bigcirc$] Error
+              \item[$\bigcirc$] Server Error
+              \item[$\bigcirc$] Non esiste il codice
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa lo status code HTTP 504
+          \begin{itemize}
+              \item[$\bigcirc$] Success
+              \item[$\bigcirc$] Redirect
+              \item[$\bigcirc$] Error
+              \item[$\bigcirc$] Server Error
+              \item[$\bigcirc$] Non esiste il codice
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa lo status code HTTP 405
+          \begin{itemize}
+              \item[$\bigcirc$] Success
+              \item[$\bigcirc$] Redirect
+              \item[$\bigcirc$] Error
+              \item[$\bigcirc$] Server Error
+              \item[$\bigcirc$] Non esiste il codice
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa lo status code HTTP 403
+          \begin{itemize}
+              \item[$\bigcirc$] Success
+              \item[$\bigcirc$] Redirect
+              \item[$\bigcirc$] Error
+              \item[$\bigcirc$] Server Error
+              \item[$\bigcirc$] Non esiste il codice
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa lo status code HTTP 205
+          \begin{itemize}
+              \item[$\bigcirc$] Success
+              \item[$\bigcirc$] Redirect
+              \item[$\bigcirc$] Error
+              \item[$\bigcirc$] Server Error
+              \item[$\bigcirc$] Non esiste il codice
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa lo status code HTTP 304
+          \begin{itemize}
+              \item[$\bigcirc$] Success
+              \item[$\bigcirc$] Redirect
+              \item[$\bigcirc$] Error
+              \item[$\bigcirc$] Server Error
+              \item[$\bigcirc$] Non esiste il codice
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa lo status code HTTP 200
+          \begin{itemize}
+              \item[$\bigcirc$] Success
+              \item[$\bigcirc$] Redirect
+              \item[$\bigcirc$] Error
+              \item[$\bigcirc$] Server Error
+              \item[$\bigcirc$] Non esiste il codice
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa lo status code HTTP 302
+          \begin{itemize}
+              \item[$\bigcirc$] Success
+              \item[$\bigcirc$] Redirect
+              \item[$\bigcirc$] Error
+              \item[$\bigcirc$] Server Error
+              \item[$\bigcirc$] Non esiste il codice
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item come si chiama la prima linea di risposta nel protocollo HTTP?
+          \begin{itemize}
+              \item[$\bigcirc$] Status line
+              \item[$\bigcirc$] error line
+              \item[$\bigcirc$] Header line
+              \item[$\bigcirc$] TiTLE
+              \item[$\bigcirc$] Response
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: indicare quali dei seguenti sono metodi possibili in un messaggio di request
+          \begin{itemize}
+              \item[$\Box$] POST
+              \item[$\Box$] TRACE
+              \item[$\Box$] OPTIONS
+              \item[$\Box$] INSERT
+              \item[$\Box$] REQUEST
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: indicare quali dei seguenti sono metodi possibili in un messaggio di request
+          \begin{itemize}
+              \item[$\Box$] POST
+              \item[$\Box$] DELETE
+              \item[$\Box$] GET
+              \item[$\Box$] INSERT
+              \item[$\Box$] REQUEST
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: indicare quali dei seguenti sono metodi possibili in un messaggio di request
+          \begin{itemize}
+              \item[$\Box$] HEAD
+              \item[$\Box$] DELETE
+              \item[$\Box$] TRACE
+              \item[$\Box$] INSERT
+              \item[$\Box$] REQUEST
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: indicare quali dei seguenti sono metodi possibili in un messaggio di request
+          \begin{itemize}
+              \item[$\Box$] HEAD
+              \item[$\Box$] PUT
+              \item[$\Box$] CONNECT
+              \item[$\Box$] INSERT
+              \item[$\Box$] REQUEST
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: indicare quali dei seguenti sono metodi possibili in un messaggio di request
+          \begin{itemize}
+              \item[$\Box$] HEAD
+              \item[$\Box$] PUT
+              \item[$\Box$] DISCONNECT
+              \item[$\Box$] INSERT
+              \item[$\Box$] REQUEST
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: indicare quali dei seguenti sono metodi possibili in un messaggio di request
+          \begin{itemize}
+              \item[$\Box$] HEAD
+              \item[$\Box$] POST
+              \item[$\Box$] DISCONNECT
+              \item[$\Box$] INSERT
+              \item[$\Box$] REQUEST
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: indicare le parti in cui consiste un messagggio di request
+          \begin{itemize}
+              \item[$\Box$] request line
+              \item[$\Box$] headers
+              \item[$\Box$] body before headers
+              \item[$\Box$] response after body
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item WEBARCH: indicare le parti in cui consiste un messagggio di request
+          \begin{itemize}
+              \item[$\Box$] request line
+              \item[$\Box$] headers
+              \item[$\Box$] an empty line after headers
+              \item[$\Box$] an empty line after request line
+              \item[$\Box$] an optional message body
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di
+          \begin{verbatim}
+mailto:email@protected.com
+?body=Buongiorno%2C%20Lei%20
+ha%20uperto%20l'esame 
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] Nessuno degli altri
+              \item[$\bigcirc$] URI
+              \item[$\bigcirc$] URN
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di
+          \begin{verbatim}
+email@protected.com?subject=
+Superamento%20esame&cc=
+programmazioneweb%40gmail.com
+&body=Buongiorno%2C%20Lei%20ha
+%20uperto%20l'esame 
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] URL
+              \item[$\bigcirc$] URI
+              \item[$\bigcirc$] URN
+              \item[$\bigcirc$] Nessuno degli altri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di
+          \begin{verbatim}
+mailto:email@protected.com
+?subject=%A0%34%to%20mesee
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] Nessuno degli altri
+              \item[$\bigcirc$] URI
+              \item[$\bigcirc$] URN
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di
+          \begin{verbatim}
+mail:email@protected.com
+?subject=Superamento%20esame
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] URL
+              \item[$\bigcirc$] URI
+              \item[$\bigcirc$] URN
+              \item[$\bigcirc$] Nessuno degli altri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di
+          \begin{verbatim}
+mailto:email@protected.com
+?subject=Superamento%20esame 
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] Nessuno degli altri
+              \item[$\bigcirc$] URI
+              \item[$\bigcirc$] URN
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di urn:lex-eu-council-directive-2010-03-09;2010-19-UE
+          \begin{itemize}
+              \item[$\bigcirc$] URL
+              \item[$\bigcirc$] URI
+              \item[$\bigcirc$] URN
+              \item[$\bigcirc$] Nessuno degli altri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di phone:00390461275422
+          \begin{itemize}
+              \item[$\bigcirc$] URL
+              \item[$\bigcirc$] URI
+              \item[$\bigcirc$] URN
+              \item[$\bigcirc$] Nessuno degli altri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di tel:00390461275422
+          \begin{itemize}
+              \item[$\bigcirc$] URL
+              \item[$\bigcirc$] errore di sintassi
+              \item[$\bigcirc$] URN
+              \item[$\bigcirc$] Nessuno degli altri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la tipologia di urn:uuid:6e8bxyz0-9c3a-11d9-9669-0800200c9a66
+          \begin{itemize}
+              \item[$\bigcirc$] URL
+              \item[$\bigcirc$] URI
+              \item[$\bigcirc$] URN
+              \item[$\bigcirc$] Nessuno degli altri
+              \item[$\bigcirc$] errore di sintassi
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quali dei seguenti e' obbligatorio in un URL
+          \begin{itemize}
+              \item[$\Box$] Protocollo
+              \item[$\Box$] host
+              \item[$\Box$] folder path
+              \item[$\Box$] webpage
+              \item[$\Box$] anchor
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La frase NON TUTTI GLI URL SONO URI e:
+          \begin{itemize}
+              \item[$\bigcirc$] vera sempre
+              \item[$\bigcirc$] vera a seconda dell'interpretazione dell'RFC
+              \item[$\bigcirc$] sempre falsa
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item A URN has to be of form
+          \begin{itemize}
+              \item[$\bigcirc$]\verb_<URN> ::= "urn:" <NID> ":" <NSS>_
+              \item[$\bigcirc$]\verb_<URN> ::= <NID> ":" <NSS>_
+              \item[$\bigcirc$] non c'e' una forma prestabilita
+              \item[$\bigcirc$]\verb_<URN> ::= "urn:" <URL> ":" <URI>_
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item il termine “UniformResource Locator” (URL) si riferisce a
+          \begin{itemize}
+              \item[$\bigcirc$] sottoinsieme di URN che, oltre a identificare una risorsa, forniscono unmezzo per localizzare la risorsa descrivendo il suo meccanismo di accesso primario
+              \item[$\bigcirc$] sottoinsieme di URN che forniscono un mezzo per localizzare la risorsadescrivendo il suo meccanismo di accesso
+              \item[$\bigcirc$] sottoinsieme di URI che, oltre a identificare una risorsa, forniscono unmezzo per descrivendo il suo meccanismo di accesso
+              \item[$\bigcirc$] Non si possono riferire
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item il termine “UniformResource Name” (URN) si riferisce a
+          \begin{itemize}
+              \item[$\bigcirc$] sottoinsieme di URI che, oltre a identificare una risorsa, forniscono unmezzo per localizzare la risorsa descrivendo il suo meccanismo di accesso primario
+              \item[$\bigcirc$] sottoinsieme di URI che forniscono un mezzo per localizzare la risorsadescrivendo il suo meccanismo di accesso
+              \item[$\bigcirc$] sottoinsieme di URI che, oltre a identificare una risorsa, forniscono unmezzo per descrivendo il suo meccanismo di accesso
+              \item[$\bigcirc$] Non si possono riferire
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item il termine “UniformResource Locator” (URL) si riferisce a
+          \begin{itemize}
+              \item[$\bigcirc$] sottoinsieme di URI che, oltre a identificare una risorsa, forniscono unmezzo per localizzare la risorsa descrivendo il suo meccanismo di accesso primario
+              \item[$\bigcirc$] sottoinsieme di URI che forniscono un mezzo per localizzare la risorsadescrivendo il suo meccanismo di accesso
+              \item[$\bigcirc$] sottoinsieme di URI che, oltre a identificare una risorsa, forniscono unmezzo per descrivendo il suo meccanismo di accesso
+              \item[$\bigcirc$] Non si possono riferire
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item HTML e' un linguaggio di programmazione?
+          \begin{itemize}
+              \item[$\bigcirc$] no
+              \item[$\bigcirc$] si
+              \item[$\bigcirc$] solo se abbinato con css
+              \item[$\bigcirc$] solo se abbinato a bootstrap
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il Server web Apache ha una rilevanza percentuale modiale del
+          \begin{itemize}
+              \item[$\bigcirc$] 50
+              \item[$\bigcirc$] 10
+              \item[$\bigcirc$] 80
+              \item[$\bigcirc$] 90
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Microsoft IIS ha una rilevanza percentuale mondiale del web
+          \begin{itemize}
+              \item[$\bigcirc$] 10
+              \item[$\bigcirc$] 50
+              \item[$\bigcirc$] 70
+              \item[$\bigcirc$] 80
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item nginx e' un server web
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] No e' un aplication server
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Apache Tomcat puo' essere considerato un server WEB
+          \begin{itemize}
+              \item[$\bigcirc$] Si se opportunamente configurato
+              \item[$\bigcirc$] No e' un application server
+              \item[$\bigcirc$] solo se chiamato da un server Apache
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il termine Server Web puo' significare:
+          \begin{itemize}
+              \item[$\bigcirc$] Un computer che esegue un programma che accetta richieste HTTP erestituisce risposte HTTP con contenuto di dati opzionali
+              \item[$\bigcirc$] Un programma per computer che accetta richieste HTTP ed FTP e restituiscerisposte HTTP ed FTP con contenuto di dati opzionali
+              \item[$\bigcirc$] Un programma per computer che accetta richieste su qualsiasi porta erestituisce risposte HTTP con contenuto di dati opzionali
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il termine Server Web puo' significare:
+          \begin{itemize}
+              \item[$\bigcirc$] Un programma per computer che accetta richieste HTTP e restituisce risposteHTTP con contenuto di dati opzionali
+              \item[$\bigcirc$] Un programma per computer che accetta richieste HTTP ed FTP e restituiscerisposte HTTP ed FTP con contenuto di dati opzionali
+              \item[$\bigcirc$] Un programma per computer che accetta richieste su qualsiasi porta erestituisce risposte HTTP con contenuto di dati opzionali
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare I cartteri generali delle WebArchitectures
+          \begin{itemize}
+              \item[$\Box$] Non ci sono tiers
+              \item[$\Box$] Ogni tier ha un ruolo definito
+              \item[$\Box$] I tier sono implementati da uno o piu' server
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare I cartteri generali delle WebArchitectures
+          \begin{itemize}
+              \item[$\Box$] Non ci sono tiers
+              \item[$\Box$] Ogni tier ha un ruolo definito
+              \item[$\Box$] I tier sono implementati da uno o piu' server
+              \item[$\Box$] I server possono condividere l'hardware
+              \item[$\Box$] La comunicazione dei tiers avviene via messaggi
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare I cartteri generali delle WebArchitectures
+          \begin{itemize}
+              \item[$\Box$] Non ci sono tiers
+              \item[$\Box$] Ogni tier ha un ruolo definito
+              \item[$\Box$] I tier sono implementati da uno o piu' server
+              \item[$\Box$] La comunicazione tra tiers avviene via rete
+              \item[$\Box$] La comunicazione dei tiers avviene via messaggi
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In che anno Tim BernersLee aveva pensato ad un precursore del WWW?
+          \begin{itemize}
+              \item[$\bigcirc$] 1989
+              \item[$\bigcirc$] 1990
+              \item[$\bigcirc$] 1992
+              \item[$\bigcirc$] 1985
+              \item[$\bigcirc$] Non e' BernersLee ad averlo pensato
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item in che modo devo definire un campo di input in un form?
+          \begin{itemize}
+              \item[$\bigcirc$] TEXTFIELD
+              \item[$\bigcirc$] TEXTINPUT TYPE="TEXT"
+              \item[$\bigcirc$] INPUT TYPE="TEXT"
+              \item[$\bigcirc$] INPUT TYPE="TEXTFIELD"
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What is the correct HTML element for inserting a line break?
+          \begin{itemize}
+              \item[$\bigcirc$] BR
+              \item[$\bigcirc$] LB
+              \item[$\bigcirc$] \verb=\n=
+              \item[$\bigcirc$] BREAK
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item quale e' l'elemento html per l'heading maggiore
+          \begin{itemize}
+              \item[$\bigcirc$] H1
+              \item[$\bigcirc$] TITLE
+              \item[$\bigcirc$] HEAD
+              \item[$\bigcirc$] HEADING
+              \item[$\bigcirc$] H6
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Chi fissa gli standard WEB
+          \begin{itemize}
+              \item[$\bigcirc$] world wide web consortium
+              \item[$\bigcirc$] google
+              \item[$\bigcirc$] microsoft
+              \item[$\bigcirc$] word wide web consortium
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa significa HTML
+          \begin{itemize}
+              \item[$\bigcirc$] hyper tool mark language
+              \item[$\bigcirc$] hypertext markup language
+              \item[$\bigcirc$] hyperlink text markup language
+              \item[$\bigcirc$] home text made language
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa fa il comando git push
+          \begin{itemize}
+              \item[$\bigcirc$] salva I cambiamenti nel repository locale
+              \item[$\bigcirc$] salva I cambiamenti nel repository globale
+              \item[$\bigcirc$] salva I cambiamenti nel repository locale e globale
+              \item[$\bigcirc$] salva il repository locale nel globale
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Cosa fa il comando git commit
+          \begin{itemize}
+              \item[$\bigcirc$] salva I cambiamenti nel repository locale
+              \item[$\bigcirc$] salva I cambiamenti nel repository globale
+              \item[$\bigcirc$] salva I cambiamenti nel repository locale e globale
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item come si cambia branch in GIT?
+          \begin{itemize}
+              \item[$\bigcirc$] con il comando git checkout
+              \item[$\bigcirc$] con il comando git branch
+              \item[$\bigcirc$] con il comando git clone
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item nel seguente esempio GIT come memrizza I dati? https://pasteboard.co/I7ZR51P.png
+          \begin{itemize}
+              \item[$\bigcirc$] 3 blob, 1 tree 1 commit
+              \item[$\bigcirc$] 1 tree
+              \item[$\bigcirc$] un commit ed il resto sono puntatori
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare le caatteristiche di un branch dii git
+          \begin{itemize}
+              \item[$\Box$] un branch rappresenta uno sviluppo indipendente
+              \item[$\Box$] I branch coesistono nello stesso repository
+              \item[$\Box$] I branch sono correlati tra di loro
+              \item[$\Box$] master e' il branch di default
+              \item[$\Box$] topbranch e' il branch di default
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il comando git clone https://github.com/force.git
+          \begin{itemize}
+              \item[$\bigcirc$] crea una directory locale con un repository e riferimenti diclonatura
+              \item[$\bigcirc$] clona il progetto su github in locale
+              \item[$\bigcirc$] copia il file force.git in locale e lo esegue
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Git ha una staging area
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Git permette di
+          \begin{itemize}
+              \item[$\bigcirc$] Avere repository locali e remoti
+              \item[$\bigcirc$] Avere repository remoti
+              \item[$\bigcirc$] avere repository locali
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item GIT e' un sistema
+          \begin{itemize}
+              \item[$\bigcirc$] DVCS
+              \item[$\bigcirc$] SVN
+              \item[$\bigcirc$] VCS
+              \item[$\bigcirc$] LVCS
+              \item[$\bigcirc$] CVCS
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item GIT: Inidcare le caratteristiche di un VCS
+          \begin{itemize}
+              \item[$\Box$] reversability
+              \item[$\Box$] annotation
+              \item[$\Box$] concurency
+              \item[$\Box$] secureTransfer
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item GIT: Inidcare le caratteristiche di un VCS
+          \begin{itemize}
+              \item[$\Box$] reversability
+              \item[$\Box$] hyperlapse
+              \item[$\Box$] concurency
+              \item[$\Box$] secureTransfer
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il Middleware e'
+          \begin{itemize}
+              \item[$\bigcirc$] A:Un layer software sopra al sistema operativo che provvede api per ilsistema distribuito
+              \item[$\bigcirc$] B:Una applicazione che provvede a gestire le comunicazioni allo stessolivello applicativo
+              \item[$\bigcirc$] C:Un sistema di servizi per la comunicazione di un sistemadistribuito
+              \item[$\bigcirc$] D: A+B+C
+              \item[$\bigcirc$] E: A+C
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quale delle seguenti assunzione e' errata in un Sistema distribuito
+          \begin{itemize}
+              \item[$\bigcirc$] A: Rete affidabile
+              \item[$\bigcirc$] B: costo trasporto nullo
+              \item[$\bigcirc$] C: la topologia non cambia
+              \item[$\bigcirc$] D: A+B+C
+              \item[$\bigcirc$] E: A+C
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item in un sistema distribuito esiste sempre un orologio globale
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La latenza tipica per un collegamento Italia USA East Coast e' in ms
+          \begin{itemize}
+              \item[$\bigcirc$] 10
+              \item[$\bigcirc$] 30
+              \item[$\bigcirc$] 120
+              \item[$\bigcirc$] 90
+              \item[$\bigcirc$] 300
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Se ho una alta latenza la mia banda effettiva diminuisce
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare le Bande disponibili per una rete LAN in Gbit/s
+          \begin{itemize}
+              \item[$\bigcirc$] 1/10/25/50/100/200
+              \item[$\bigcirc$] 1/0.1/32/64/128
+              \item[$\bigcirc$] 1/0.1/10
+              \item[$\bigcirc$] 0.1/1/10/25
+              \item[$\bigcirc$] 1/10/25/50/100/200/400/1000
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare la latenza tipica di una rete lan in microsecondi
+          \begin{itemize}
+              \item[$\bigcirc$] 0.1
+              \item[$\bigcirc$] 1
+              \item[$\bigcirc$] 5
+              \item[$\bigcirc$] 50
+              \item[$\bigcirc$] 500
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La latenza dipende solo dalla distanza
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI: DISTRIBUITI: Indicare I potenziali problemi di scalabilita' geografica
+          \begin{itemize}
+              \item[$\Box$] Comunicazioni inaffidabili
+              \item[$\Box$] Comunicazioni lente
+              \item[$\Box$] comunicazioni asiincrone
+              \item[$\Box$] comunicazioni sincrone in lan
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: Inidcare quale non e' un ambito di scalabilita'
+          \begin{itemize}
+              \item[$\bigcirc$] Dimensione
+              \item[$\bigcirc$] geografica
+              \item[$\bigcirc$] Potenza
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: Indicare Quando un sistema e' scalabile
+          \begin{itemize}
+              \item[$\Box$] A: se rimane efficace ad un aumanto sisgnificativo delle risorse
+              \item[$\Box$] B: se rimane efficace ad un aumanto sisgnificativo ddegli utenti
+              \item[$\Box$] C: Quando posso aumentarne la banda
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: Il network e' una tipologia di trasparenza di distribuzione?
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: La Coerenzaa e' una tipologia di trasparenza di distribuzione?
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: La Concorrenza e' una tipologia di trasparenza di distribuzione?
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI La replicazione e' una tipologia di trasparenza di distribuzione?
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITIQuale delle seguenti non e' una tipologia di trasparenza di distribuzione
+          \begin{itemize}
+              \item[$\bigcirc$] Access
+              \item[$\bigcirc$] Location
+              \item[$\bigcirc$] Migrazion
+              \item[$\bigcirc$] Failure
+              \item[$\bigcirc$] nessuna
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: In un ipotetico modello di condivisione ad oggetti:
+          \begin{itemize}
+              \item[$\Box$] Qualsiasi entità in un processo è modellata come un oggetto conun'interfaccia basata surete
+              \item[$\Box$] Qualsiasi risorsa condivisa è modellata come un oggetto
+              \item[$\Box$] Il middlewarebasato su oggetti definisce i modelli di risorse basati suoggetti
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: In un ipotetico modello di condivisione ad oggetti:
+          \begin{itemize}
+              \item[$\Box$] Qualsiasi entità in un processo è modellata come un oggetto conun'interfaccia basata su messaggi che fornisce accesso alle sue operazioni
+              \item[$\Box$] Qualsiasi risorsa condivisa è modellata come un oggetto
+              \item[$\Box$] Il middlewarebasato su oggetti definisce i modelli di risorse basati suoggetti
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale sia un modello di condivisione delle risorse in un sistema distribuito
+          \begin{itemize}
+              \item[$\bigcirc$] A: client-server
+              \item[$\bigcirc$] B: basato su oggetti
+              \item[$\bigcirc$] Sia A che B
+              \item[$\bigcirc$] Ne' A ne B
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In un sistema distribuito il modello di condivisione delle risorse descrive come:
+          \begin{itemize}
+              \item[$\Box$] Le risorse sono rese disponibili
+              \item[$\Box$] Le risorse possono essere utilizzate
+              \item[$\Box$] Il fornitore ed utente di servizi interagiscono tra di loro
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare tutti gli obiettivi di un sistema distribuito
+          \begin{itemize}
+              \item[$\Box$] Eterogeneita' software
+              \item[$\Box$] Eterogeneita' hardware
+              \item[$\Box$] scalabilita
+              \item[$\Box$] Fault tolerance
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare tutti gli obiettivi di un sistema distribuito
+          \begin{itemize}
+              \item[$\Box$] condivisione di risorse
+              \item[$\Box$] trasparenza di distribuzione
+              \item[$\Box$] scalabilita
+              \item[$\Box$]  falut tolerance
+              \item[$\Box$] eterogeneita' SO
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: Il sistema Application Load Balancer e' utilizzato dal motore di ricerca di GOGLE
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item SISTEMI DISTRIBUITI: Il sistema RoundRobinDNS e' utilizzato dal motore di ricerca di GOGLE
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quale dei seguenti NON e' un sistema di distribuzione del carico in un sistema WEB
+          \begin{itemize}
+              \item[$\bigcirc$] NetworkLoadBalancer
+              \item[$\bigcirc$] Hardware Load Balanacer
+              \item[$\bigcirc$] Session Load Balancer
+              \item[$\bigcirc$] Nessuno degli altri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quale dei seguenti NON e' un sistema di distribuzione del carico in un sistema WEB
+          \begin{itemize}
+              \item[$\bigcirc$] RoundRobinDns
+              \item[$\bigcirc$] Hardware Load Balanacer
+              \item[$\bigcirc$] Session Load Balancer
+              \item[$\bigcirc$] Nessuno degli altri
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Qualde dei seguenti NON e' un sistema distribuito
+          \begin{itemize}
+              \item[$\bigcirc$] Motore di ricerca
+              \item[$\bigcirc$] Server per il gioco multiplayer
+              \item[$\bigcirc$] Servizi di Borsa
+              \item[$\bigcirc$] rete telefoni cellulari
+              \item[$\bigcirc$] La rete dei computers in aula B106
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item L'aula B106, dove facciamo esercitazioni, puo' considerarsi un sistema distribuito?
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La rete internet puo' considerarsi un sistema distribuito
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Un sistema distribuito è un sistema in cui i componenti hardware e/o software, situati in computercollegati in rete, comunicano e coordinano le loro azioni solo passando messaggi
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Un sistema distribuito è un sistema in cui i componenti hardware e/o software, situati in computercollegati in rete, comunicano in rete
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Un sistema distribuito è una raccolta di computer indipendenti che appare ai suoi utenti come un unicosistema coerente
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Un sistema distribuito è una raccolta di computer indipendenti collegati da una rete
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item quali sono le caatteristiche dei database nosql
+          \begin{itemize}
+              \item[$\Box$] non esiste lo schema
+              \item[$\Box$] il database e' disribuito
+              \item[$\Box$] funziona su hardware non specializzato
+              \item[$\Box$] non ha una sintassi sql
+              \item[$\Box$] e' senza indicizzazione
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Un database noSQL riduce la necessita' di RTL?
+          \begin{itemize}
+              \item[$\bigcirc$] si sempre
+              \item[$\bigcirc$] solo nei casi di documenti
+              \item[$\bigcirc$] solo nel caso di dati JSON
+              \item[$\bigcirc$] no mai
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare I tipi di dati supportati dai database NoSQL
+          \begin{itemize}
+              \item[$\Box$] strutturati
+              \item[$\Box$] nonStrutturati
+              \item[$\Box$] semi-strutturati
+              \item[$\Box$] Omogeneizzati
+              \item[$\Box$] schematizzati
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare il significi di ETL
+          \begin{itemize}
+              \item[$\Box$] extract
+              \item[$\Box$] transform
+              \item[$\Box$] Load
+              \item[$\Box$] Execute
+              \item[$\Box$] Translate
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare il significi di ETL
+          \begin{itemize}
+              \item[$\Box$] extract
+              \item[$\Box$] transform
+              \item[$\Box$] Load
+              \item[$\Box$] Emerge
+              \item[$\Box$] Lease
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare I tipi di HA supportati da un database NoSQL
+          \begin{itemize}
+              \item[$\bigcirc$] In sola lettura da repliche
+              \item[$\bigcirc$] A repliche con elezione di Master
+              \item[$\bigcirc$] Attraverso Scalabilita' orizzontale
+              \item[$\bigcirc$] Attraverso Scalabilita' Verticale
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare le tipologie di database NoSQL
+          \begin{itemize}
+              \item[$\Box$] key-value
+              \item[$\Box$] column oriented
+              \item[$\Box$] document oriented
+              \item[$\Box$] Graph
+              \item[$\Box$] Key-data
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Ipotizzando di dover adottare un database per il social XYZ quale modello di database NoSQLsceglieresti?
+          \begin{itemize}
+              \item[$\bigcirc$] Graph Database
+              \item[$\bigcirc$] Document Databaase
+              \item[$\bigcirc$] RDBMS Database
+              \item[$\bigcirc$] Key-Value
+              \item[$\bigcirc$] Key-Data
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item I database NoSQL non supportano l'SQL
+          \begin{itemize}
+              \item[$\bigcirc$] si sempre
+              \item[$\bigcirc$] no mai
+              \item[$\bigcirc$] solo alcuni di essi
+              \item[$\bigcirc$] solo se le query sono di un certo tipo
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item I database NoSQL hanno un'API comune per l'interrogazione
+          \begin{itemize}
+              \item[$\bigcirc$] si
+              \item[$\bigcirc$] No
+              \item[$\bigcirc$] Solo attraverso SQL
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item L'operazione di JOIN e' supportata in un database NoSQL
+          \begin{itemize}
+              \item[$\bigcirc$] Si sempre
+              \item[$\bigcirc$] No Mai
+              \item[$\bigcirc$] Solo in certi Casi di query
+              \item[$\bigcirc$] Dipende dal database
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item DATABASES: Indicare I tre principi del teorema di CAP
+          \begin{itemize}
+              \item[$\bigcirc$] Consistency Availability Partition Tolerance
+              \item[$\bigcirc$] Availability Capability Positioning
+              \item[$\bigcirc$] Correlation Availability Portability
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item jdbc:odbc://www.ptc.com/Students E' un URL valido per un Database via JDBC?
+          \begin{itemize}
+              \item[$\bigcirc$] si sempre
+              \item[$\bigcirc$] No perche' manca il tipo di database
+              \item[$\bigcirc$] No perche' manca la porta di connessione
+              \item[$\bigcirc$] No perche' la sintassi e' sbagliata
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Le transazioni in un databse a cui accedo via JDBC sono
+          \begin{itemize}
+              \item[$\bigcirc$] Attive per dafult
+              \item[$\bigcirc$] Attive sul singolo statement
+              \item[$\bigcirc$] Attive sugli statement nello stesso metodo
+              \item[$\bigcirc$] La gestione delle transazioni e' una caratteristica del DB, non diJDBC
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In un database NoSQL Column Based che tipo di dato viene memeorizzato
+          \begin{itemize}
+              \item[$\bigcirc$] piu' values per ciascuna colonna
+              \item[$\bigcirc$] Piu' Key,Values per ciascuna colonna
+              \item[$\bigcirc$] Piu' blob per ciascuna colonna
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item E' legale memorizzare un {Key:{Key:Value, Key:Value}} come valore key:value in un database NoSQL di tipoadeguato??
+          \begin{itemize}
+              \item[$\bigcirc$] Si sempre
+              \item[$\bigcirc$] No Mai
+              \item[$\bigcirc$] Solo se il database lo supporta
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il Value di una coppia Key:Value in un databse Nosql puo' essere:
+          \begin{itemize}
+              \item[$\Box$] Un XML
+              \item[$\Box$] Un File
+              \item[$\Box$] Un Documento Word
+              \item[$\Box$] Una Immagine
+              \item[$\Box$] Un UUID
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item If a cookie has a max age equal to 0, what does it mean?
+          \begin{itemize}
+              \item[$\bigcirc$] Il cookie verra' cancellato appena arriva al client
+              \item[$\bigcirc$] Il cookie e' valido dino a completamento sessione sul client
+              \item[$\bigcirc$] il cookie non scade mai
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item How parameters are passed in an HTTP GET request?
+          \begin{itemize}
+              \item[$\bigcirc$] In the URL of the request
+              \item[$\bigcirc$] In the request body
+              \item[$\bigcirc$] In the header of the request
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What does CSS stand for?
+          \begin{itemize}
+              \item[$\bigcirc$] Cascade Style Sheet
+              \item[$\bigcirc$] Creative Spreadsheets
+              \item[$\bigcirc$] Control Simualtion Sheets
+              \item[$\bigcirc$] Computer Security Sheets
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item To display the image \verb=myimage.png= located in the folder \verb=folder1= in a web page that is located at
+          \begin{verbatim}
+folder1/folder2/folder3/mypage.html
+\end{verbatim}
+          you should use the relative path
+          \begin{itemize}
+              \item[$\bigcirc$] ../../myimage.png
+              \item[$\bigcirc$] ../../myimage.jpg
+              \item[$\bigcirc$] .././myImage.png
+              \item[$\bigcirc$] ../../../myimage.png
+              \item[$\bigcirc$] ./././myimage.png
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Suppose we have the following HTML document
+          \begin{verbatim}
+http://pastebin.com/5bnMSSJv
+\end{verbatim}
+          Is it a valid HTML?
+          \begin{itemize}
+              \item[$\bigcirc$] no
+              \item[$\bigcirc$] yes
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Consider the following HTML tag
+          \begin{verbatim}
+http://pastebin.com/xjks8Cm7
+\end{verbatim}
+          Considering that the attribute TITLE isused to show extra information about an HTML element, how does it differ from the ALT attribute used inimg tags?
+          \begin{itemize}
+              \item[$\bigcirc$] TITLE is shown as a tooltip text when the mouse moves over the elementwhile ALT is shown as an alternative text in case the image cannot be displayed
+              \item[$\bigcirc$] TITLE is shown as the title of the web browser window while ALT is shownwhen the user clicks on the image
+              \item[$\bigcirc$] TITLE is shown as the title of the HTML document while ALT is shown whenthe user hovers the image
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Does every HTML element must have an ID?
+          \begin{itemize}
+              \item[$\bigcirc$] non vero
+              \item[$\bigcirc$] vero
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item JavaServerPages(JSP) è un componente J2EE che consente di sviluppare applicazioni Web che funzionanocome se fossero state create con servletJava.
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item JavaServerPages(JSP) è un componente J2SE che consente di sviluppare applicazioni Web che funzionanocome se fossero state create con servletJava.
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item JavaServerPages(JSP) è un componente J2EE che consente di sviluppare applicazioni Web attraverso uninterprete Java
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item JavaServerPages(JSP) è un componente TOMCAT che consente di sviluppare applicazioni Web
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item L’approccio JSP permette di
+          \begin{itemize}
+              \item[$\bigcirc$] separare GUI design da business logic
+              \item[$\bigcirc$] separare Java da HTML
+              \item[$\bigcirc$] separare business logic dal Persistence Layer
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Un JSP e':
+          \begin{itemize}
+              \item[$\bigcirc$] Una servlet generata automaticamente dal container JSP dal file checontieneHTML e tag JSP
+              \item[$\bigcirc$] Una File che contiene dei tag che vengono processati dal container JSP
+              \item[$\bigcirc$] Un file checontiene HTML e tag JSP che TOMCAT/GLASSFISH interpreta pervisualizzare la pagina
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Una pagina JSP contiene elementi standard di markup, come HTML tags, esattamente come in una pagina web
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item una pagina JSP contiene anche elementi JSP speciali (tag) che consentono al server di inserire ilcontenuto dinamico nella pagina
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quando un utente richiede una pagina JSP, il server
+          \begin{itemize}
+              \item[$\bigcirc$] esegue gli elementi JSP, unisce i risultati con le parti statiche dellapagina in una servlet e,invia la pagina composta dinamicamente al browser
+              \item[$\bigcirc$] esegue gli elementi HTML, unisce i risultati con le parti dinamiche, inviaal compilatore il risultato che poi manda la pagina al browser
+              \item[$\bigcirc$] Interpreta le parti JSP, unendo i risultati con le parti statiche dellapagina in una servlet e,invia la pagina composta dinamicamente al browser
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nelle JSP Il metodo jspInit() esiste?
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+              \item[$\bigcirc$] Solo se implementato esplicitamente
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nelle JSP Il metodo jspInit() Viene chiamato quando?
+          \begin{itemize}
+              \item[$\bigcirc$] All'inizio
+              \item[$\bigcirc$] Alla pubblicazione della applicazione
+              \item[$\bigcirc$] Alla richiesta della pagina
+              \item[$\bigcirc$] Non esiste il metodo indicato
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nelle JSP Il metodo jspService() esiste?
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nelle JSP Il metodo jspService() a cosa serve
+          \begin{itemize}
+              \item[$\bigcirc$] A processare le request e Response
+              \item[$\bigcirc$] Non Esistel il metodo
+              \item[$\bigcirc$] Ad inizializzare il servizio JSP della pagina
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nelle JSP Il metodo \_jspService() a cosa serve
+          \begin{itemize}
+              \item[$\bigcirc$] A processare le request e Response
+              \item[$\bigcirc$] Non Esistel il metodo
+              \item[$\bigcirc$] Ad inizializzare il servizio JSP della pagina
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nelle JSP Il metodo jspDestroy() esiste?
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+              \item[$\bigcirc$] Solo se esplicitato
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nelle JSP Il metodo jspDestroy() quando viene chiamato?
+          \begin{itemize}
+              \item[$\bigcirc$] Alla fine della pagina
+              \item[$\bigcirc$] Non esiste il metodo
+              \item[$\bigcirc$] Solo se esplicitato
+              \item[$\bigcirc$] Quando faccio undeploy dell'applicazione
+              \item[$\bigcirc$] Quando chiamo il Distruttore della pagina
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale dei seguenti e' un oggetto implicito JSP
+          \begin{itemize}
+              \item[$\Box$] out
+              \item[$\Box$] request
+              \item[$\Box$] response
+              \item[$\Box$] sessionrequest
+              \item[$\Box$] contexPage
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale dei seguenti e' un oggetto implicito JSP
+          \begin{itemize}
+              \item[$\Box$] session
+              \item[$\Box$] application
+              \item[$\Box$] context
+              \item[$\Box$] sessionrequest
+              \item[$\Box$] page
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale dei seguenti e' un oggetto implicito JSP
+          \begin{itemize}
+              \item[$\Box$] config
+              \item[$\Box$] page
+              \item[$\Box$] context
+              \item[$\Box$] sessionrequest
+              \item[$\Box$] contexPage
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item pageContext e' un oggetto implicito JSP
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item I commenti JSP sono inclusi nell'output HTMl della pagina
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item in JSP una declaration e’ un blocco di codice Java usato per:
+          \begin{itemize}
+              \item[$\bigcirc$] Non esiste tale elemento JSP
+              \item[$\bigcirc$] define class-wide variables (global variables) and methods in the generatedservlet
+              \item[$\bigcirc$] passare le informazioni dal codice JSP al Web Container al momento dellacompilazione
+              \item[$\bigcirc$] passare le informazioni dal codice JSP al Web Container all'accesso dellapagina
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale dei seguenti e' una Directives JSP
+          \begin{itemize}
+              \item[$\Box$] contentType
+              \item[$\Box$] import
+              \item[$\Box$] context
+              \item[$\Box$] sessionRequest
+              \item[$\Box$] contextPage
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale dei seguenti e' una Directives JSP
+          \begin{itemize}
+              \item[$\Box$] errorPage
+              \item[$\Box$] isErrorPage
+              \item[$\Box$] isPageError
+              \item[$\Box$] importPage
+              \item[$\Box$] contextType
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La seguente direttiva JSP e' corretta?
+          \begin{verbatim}
+<%@ page isThreadSafe="false" %>
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La seguente direttiva JSP e' corretta?
+          \begin{verbatim}
+<%@ page isErrorPage="true" %>
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La seguente direttiva JSP e' corretta?
+          \begin{verbatim}
+<%= new Date().toString() %>
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La seguente espressione JSP e' corretta?
+          \begin{verbatim}
+<%= new Date().toString() %>
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La seguente espressione JSP e' corretta?
+          \begin{verbatim}
+<%= new Date().toString(); %>
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La seguente direttiva JSP e' corretta?
+          \begin{verbatim}
+<%= new Date().toString(); %>
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] SI
+              \item[$\bigcirc$] NO
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Che cosa e' uno scriptlet JSP
+          \begin{itemize}
+              \item[$\bigcirc$] un blocco di codice Java eseguito al momento di elaborazione dellarichiesta
+              \item[$\bigcirc$] un blocco di codice Java eseguito al momento della compilazione
+              \item[$\bigcirc$] una macro HTML eseguita al momento di elaborazione della richiesta
+              \item[$\bigcirc$] un blocco di codice JSP eseguito al momento di elaborazione dellarichiesta
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item JSP: la direttiva include aggiunge il contenuto della pagina inclusa al momento della compilazione
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item JSP: la direttiva include aggiunge il contenuto della pagina inclusa al momento della richiesta dellapagina
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In JSP all'interno di parentesi angolari correttamente formulate jsp:forward page="someOther.jsp” e' un
+          \begin{itemize}
+              \item[$\bigcirc$] Action
+              \item[$\bigcirc$] Scriptlet
+              \item[$\bigcirc$] Declaration
+              \item[$\bigcirc$] Expression
+              \item[$\bigcirc$] Syntax Error
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale deelle seguenti affermazioni e' vera per le Expressions JSP
+          \begin{itemize}
+              \item[$\Box$] Expression is evaluated and converted into a String
+              \item[$\Box$] The String is then Inserted into the servlet's output streamdirectly
+              \item[$\Box$] Results in something like out.println(expression)
+              \item[$\Box$] Can use predefined variables (implicit objects) within expressions
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale deelle seguenti affermazioni e' vera per gli Scriptlet JSP
+          \begin{itemize}
+              \item[$\Box$] setting response headers and status codes
+              \item[$\Box$] writing to a server log
+              \item[$\Box$] updating database
+              \item[$\Box$] executing code that contains loops, conditionals
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale delle seguenti affermazioni, in una architettura a 3-Tier e' vera per il presentationlayer
+          \begin{itemize}
+              \item[$\Box$] Provides user interface
+              \item[$\Box$] Handles the interaction with the user
+              \item[$\Box$] Sometimes called front-end
+              \item[$\Box$] Should not contain business logic or data access code
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale delle seguenti affermazioni, in una architettura a 3-Tier e' vera per il Logic layer
+          \begin{itemize}
+              \item[$\Box$] Contains the set of rules for processing information
+              \item[$\Box$] Can accommodate many users
+              \item[$\Box$] Sometimes called middleware
+              \item[$\Box$] Should not contain presentation or data access code
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale delle seguenti affermazioni, in una architettura a 3-Tier e' vera per il Data Layer
+          \begin{itemize}
+              \item[$\Box$] Provides the physical storage layer for data persistence
+              \item[$\Box$] Manages access to DB or file system
+              \item[$\Box$] Sometimes called back-end
+              \item[$\Box$] Should not contain presentation or business logic code
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nel Pattern MVC indicare quale delle seguenti affermazioni fa parte del MODEL:
+          \begin{itemize}
+              \item[$\Box$] gestisce il comportamento e i dati del dominio dell'applicazione
+              \item[$\Box$] risponde alle richieste di informazioni circa il suo stato
+              \item[$\Box$] riceve l'input dell'utente e avvia a risposta effettuando chiamate sulmodello oggetti
+              \item[$\Box$] accetta input dall'utente e indica il modello e il viewportda eseguireazioni basate su quell'input
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nel Pattern MVC indicare quale delle seguenti affermazioni fa parte del CONTROLLER:
+          \begin{itemize}
+              \item[$\Box$] gestisce il comportamento e i dati del dominio dell'applicazione
+              \item[$\Box$] risponde alle richieste di informazioni circa il suo stato
+              \item[$\Box$] riceve l'input dell'utente e avvia a risposta effettuando chiamate sulmodello oggetti
+              \item[$\Box$] accetta input dall'utente e indica il modello e il viewportda eseguireazioni basate su quell'input
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nel Pattern MVC indicare quale delle seguenti affermazioni fa parte del CONTROLLER:
+          \begin{itemize}
+              \item[$\Box$] definisce come l'interfaccia utente reagisce all'input dell'utente
+              \item[$\Box$] invia messaggi al modello
+              \item[$\Box$] Registra lo stato dell'applicazione
+              \item[$\Box$] Contiene conoscenze specifiche del dominio
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nel Pattern MVC indicare quale delle seguenti affermazioni fa parte del VIEW:
+          \begin{itemize}
+              \item[$\Box$] definisce come l'interfaccia utente reagisce all'input dell'utente
+              \item[$\Box$] Non esegue alcuna elaborazione
+              \item[$\Box$] Registra lo stato dell'applicazione
+              \item[$\Box$] Contiene conoscenze specifiche del dominio
+              \item[$\Box$] Presenta i dati all'utente
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Un Design Patter e' un Modello finito?
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il pattern MVC Permette a più viste di condividere lo stesso modello di dati
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nel pattern MVC le informazioni sulla sessione fanno parte del
+          \begin{itemize}
+              \item[$\bigcirc$] model
+              \item[$\bigcirc$] view
+              \item[$\bigcirc$] controller
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Nel pattern MVC le regole che regolano le transazioni fanno parte del
+          \begin{itemize}
+              \item[$\bigcirc$] model
+              \item[$\bigcirc$] view
+              \item[$\bigcirc$] controller
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quale delle seguenti e' una libreria standard JSTL
+          \begin{itemize}
+              \item[$\Box$] Core
+              \item[$\Box$] XML
+              \item[$\Box$] Formatting
+              \item[$\Box$] JSON
+              \item[$\Box$] Math
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare quale dei seguenti URI e' corretto per la libreria JSTL SQL
+          \begin{itemize}
+              \item[$\bigcirc$] Non esiste la libreria
+              \item[$\bigcirc$] uri="http://java.sun.com/jsp/jstl/sql"
+              \item[$\bigcirc$] uri="http://java.sun.com/jstl/sql"
+              \item[$\bigcirc$] uri="http://jsp.sun.com/jstl/sql"
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare quale dei seguenti URI e' corretto per la libreria JSTL JSON
+          \begin{itemize}
+              \item[$\bigcirc$] Non esiste la libreria
+              \item[$\bigcirc$] uri="http://java.sun.com/jsp/jstl/json"
+              \item[$\bigcirc$] uri="http://java.sun.com/jstl/json"
+              \item[$\bigcirc$] uri="http://jsp.sun.com/jstl/json"
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item indicare quale dei seguenti URI e' corretto per la libreria JSTL i18n
+          \begin{itemize}
+              \item[$\bigcirc$] Non esiste la libreria
+              \item[$\bigcirc$] uri="http://java.sun.com/jsp/jstl/i18n"
+              \item[$\bigcirc$] uri="http://java.sun.com/jstl/i18n"
+              \item[$\bigcirc$] uri="http://jsp.sun.com/jstl/i18n"
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item l'espressione JSTL EL \verb=${5 le 5}= che risultato da?
+          \begin{itemize}
+              \item[$\bigcirc$] Syntax Error
+              \item[$\bigcirc$] true
+              \item[$\bigcirc$] false
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Come accedo in JSTL ad una variabile "username" con scope Request?
+          \begin{itemize}
+              \item[$\bigcirc$] \verb=${requestScope.username}=
+              \item[$\bigcirc$] \verb=${scopeRequest.username}=
+              \item[$\bigcirc$] \verb=${request.username}=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La seguente sintassi per una variabile JSTL EL e' corretta? \verb=${sessionScope.user["name"]}=
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item La seguente sintassi per una variabile JSTL EL e' corretta? \verb=${header["User-Agent"]}=
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Esiste un operatore di loop JSTL di nome forTokens
+          \begin{itemize}
+              \item[$\bigcirc$] True
+              \item[$\bigcirc$] False
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item E' possibile determinare la nazione in base al proprio indirizzo IP?
+          \begin{itemize}
+              \item[$\bigcirc$] No, solo attraverso GPS ed HTML5
+              \item[$\bigcirc$] Si attraverso libreria, senza alcun consenso
+              \item[$\bigcirc$] Si attraverso libreria con consenso esplicito
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quali dei seguenti passaggi e' fondamentale per incorporare il supporto multilingue nellepagine web
+          \begin{itemize}
+              \item[$\Box$] Creare un ResourceBoundle per ogni lingua che si intende supportare
+              \item[$\Box$] Registrare il Resource Boundle con l'applicazione chiamando il metodoinit() della classe
+              \item[$\Box$] Registrare il Resource Boundlecon l'applicazione impostando uncontextparameter nel web.xml
+              \item[$\Box$] Nelle visualizzazioni di pagina, sostituire il testo "hardcoded" con i tag"fmt: message" correttamente formattato in parentesi angolari , che fanno riferimento allechiavi nei bundle di risorse
+              \item[$\Box$] Nelle visualizzazioni di pagina, sostituire il testo "hardcoded" con i tagcorrettamente formattato in parentesi angolari i18n: text che fanno riferimento alle chiavi neibundle di risorse
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Il QR e' un tipo di codice a Barre?
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] No
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quanti sono I finder pattern in un QR?
+          \begin{itemize}
+              \item[$\bigcirc$] 3
+              \item[$\bigcirc$] 4
+              \item[$\bigcirc$] 9
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In un codice QR e' previsto un bordo ?
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] no
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quale e' la percentuale massima di errore sostenibile da un QR?
+          \begin{itemize}
+              \item[$\bigcirc$] 30
+              \item[$\bigcirc$] 7
+              \item[$\bigcirc$] 15
+              \item[$\bigcirc$] 45
+              \item[$\bigcirc$] 0
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Posso teoricamente iniettare un virus attraveso un QR
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] No
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quale e' il massimo numero di caratteri di testo che posso inserire in un QR?
+          \begin{itemize}
+              \item[$\bigcirc$] 4296
+              \item[$\bigcirc$] 4096
+              \item[$\bigcirc$] 2048
+              \item[$\bigcirc$] 8192
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quale e' il massimo numero di caratteri Kanji che posso inserire in un QR?
+          \begin{itemize}
+              \item[$\bigcirc$] 1817
+              \item[$\bigcirc$] 1781
+              \item[$\bigcirc$] 2048
+              \item[$\bigcirc$] 2953
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Quale dei seguenti protocolli serve a spedire mail
+          \begin{itemize}
+              \item[$\bigcirc$] SMTP
+              \item[$\bigcirc$] POP
+              \item[$\bigcirc$] IMAP
+              \item[$\bigcirc$] SNMP
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Ipotizzando di spedire mail attraverso un server Google l'autenticazione OAUTH2 e' permessa?
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] No
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Ipotizzando di spedire mail attraverso un server Google posso spedire attraverso la porta 25 o 925?
+          \begin{itemize}
+              \item[$\bigcirc$] No
+              \item[$\bigcirc$] Si
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Posso spedire una mail da Java con una data diversa dall'attuale?
+          \begin{itemize}
+              \item[$\bigcirc$] Si
+              \item[$\bigcirc$] No
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Indicare quali metodi sono possibili per fornire dati ad un componente DataTable
+          \begin{itemize}
+              \item[$\Box$] ServerSide Processing
+              \item[$\Box$] DOM
+              \item[$\Box$] Javascript Array
+              \item[$\Box$] AjaxSource con risposta in JSON
+              \item[$\Box$] Jquery con risposta XML
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Java Script File Has An Extension Of
+          \begin{itemize}
+              \item[$\bigcirc$] .js
+              \item[$\bigcirc$] .java
+              \item[$\bigcirc$] .javascript
+              \item[$\bigcirc$] .script
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In Javascript isNaN() Evalutes an Argument To Determine if Given Value
+          \begin{itemize}
+              \item[$\bigcirc$] is not a number
+              \item[$\bigcirc$] is not null
+              \item[$\bigcirc$] is not void
+              \item[$\bigcirc$] non of the others
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Which function is used, in Javascript, to Parse a String to int
+          \begin{itemize}
+              \item[$\bigcirc$] parseInt
+              \item[$\bigcirc$] Integer.Parse
+              \item[$\bigcirc$] Parse.Int
+              \item[$\bigcirc$] Integer.ParseInt
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In Javascript What is the result of the following assignement to a variable: ( 20 \% 2 )
+          \begin{itemize}
+              \item[$\bigcirc$] 0
+              \item[$\bigcirc$] Illegal Expression
+              \item[$\bigcirc$] 10
+              \item[$\bigcirc$] 0.4
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item console.log("Pizzatown".substring(3, 7)); Will print what to the console?
+          \begin{itemize}
+              \item[$\bigcirc$] zato
+              \item[$\bigcirc$] zzat
+              \item[$\bigcirc$] atow
+              \item[$\bigcirc$] zzato
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item How do you create a function in JavaScript?
+          \begin{itemize}
+              \item[$\bigcirc$] function MyFunction()
+              \item[$\bigcirc$] function::myFunction()
+              \item[$\bigcirc$] function -> myFunction()
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In Javascript How do you call a function named "myFunction"?
+          \begin{itemize}
+              \item[$\bigcirc$] myFunction()
+              \item[$\bigcirc$] call myFunction()
+              \item[$\bigcirc$] call function myFunction()
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item How can you add a comment in a JavaScript?
+          \begin{itemize}
+              \item[$\bigcirc$] prepend with two slash characters
+              \item[$\bigcirc$] prepend with a pound sign
+              \item[$\bigcirc$] As you do in HTML
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item How to insert a comment that has more than one line in javascript?
+          \begin{itemize}
+              \item[$\bigcirc$] As in C
+              \item[$\bigcirc$] prepend with a pound sign
+              \item[$\bigcirc$] As you do in HTML
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What is the correct way to write a JavaScript array?
+          \begin{itemize}
+              \item[$\bigcirc$] \verb_var colors = "red", "green", "blue"_
+              \item[$\bigcirc$] \verb_var colors = (1:"red", 2:"green", 3:"blue")_
+              \item[$\bigcirc$]
+                    \begin{verbatim}
+var colors = 1 = ("red"),
+             2 = ("green"),
+             3 = ("blue")
+\end{verbatim}
+              \item[$\bigcirc$] \verb_var colors = ["red", "green", "blue"]_
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In JavaScript What will the following code return: \verb=Boolean(10 > true)=
+          \begin{itemize}
+              \item[$\bigcirc$] Boolean true
+              \item[$\bigcirc$] Undefined
+              \item[$\bigcirc$] NaN
+              \item[$\bigcirc$] Boolean false
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Is Javascript case sensitive?
+          \begin{itemize}
+              \item[$\bigcirc$] Yes
+              \item[$\bigcirc$] No
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What will the code below output?
+          \begin{verbatim}
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 == 0.3);
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb=0.30000000000000004 false=
+              \item[$\bigcirc$] \verb=0.3 true=
+              \item[$\bigcirc$] \verb=0.1 false=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What will the code below output to the console ?
+          \begin{verbatim}
+console.log(1 + "2" + "2");
+console.log(1 + +"2" + "2");
+console.log(1 + -"1" + "2");
+console.log(+"1" + "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb="122" "32" "02" "112" "NaN2" NaN=
+              \item[$\bigcirc$]
+                    \begin{verbatim}
+"122" Syntax Error Syntax Error
+"112" Syntax Error Syntax Error
+\end{verbatim}
+              \item[$\bigcirc$] \verb="122" "NaN2" "NaN2" "112" "NaN2" NaN=
+              \item[$\bigcirc$] \verb="122" "5" "2" "112" "A-B2" NaN2=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In Javascript What would the following lines of code output to the console?
+          \begin{verbatim}
+console.log("0 || 1 = "+(0 || 1));
+console.log("1 || 2 = "+(1 || 2));
+console.log("0 && 1 = "+(0 && 1));
+console.log("1 && 2 = "+(1 && 2));
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb_0 || 1 = 1 1 || 2 = 1 0 && 1 = 0 1 && 2 = 2_
+              \item[$\bigcirc$] \verb_0 || 1 = 1 1 || 2 = 1 0 && 1 = 1 1 && 2 = 2_
+              \item[$\bigcirc$] \verb_0 || 1 = 1 1 || 2 = 2 0 && 1 = 1 1 && 2 = 2_
+              \item[$\bigcirc$] \verb_0 || 1 = 1 1 || 2 = 1 0 && 1 = 0 1 && 2 = 1_
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What will be the output when the following code is executed?
+          \begin{verbatim}
+console.log(true == '2');
+console.log(false === '0');
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb=true false=
+              \item[$\bigcirc$] \verb=true Syntax Error=
+              \item[$\bigcirc$] \verb=false false=
+              \item[$\bigcirc$] \verb=true true=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What do the following lines output?
+          \begin{verbatim}
+console.log(1 < 4 < 3);
+console.log(4> 3 > 1);
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb=true false=
+              \item[$\bigcirc$] \verb=Syntax Error Syntax Error=
+              \item[$\bigcirc$] \verb=false false=
+              \item[$\bigcirc$] \verb=true true=
+              \item[$\bigcirc$] \verb=false true=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What will be the output of the code below?
+          \begin{verbatim}
+var bar = true;
+console.log(bar + 0);
+console.log(bar + "xyz");
+console.log(bar + true);
+console.log(bar + false);
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb=1, "truexyz", 2, 1=
+              \item[$\bigcirc$] \verb="true0", "truexyz","20","10"=
+              \item[$\bigcirc$] \verb=1, "xyz", 2, 1=
+              \item[$\bigcirc$] \verb=0, "0xyz", 0, 1=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What is the result of the following comparisons:
+          \begin{verbatim}
+false == 'false'
+false == '0'
+false == undefined
+false == null
+null == undefined
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb=false, true, false, false, true=
+              \item[$\bigcirc$] \verb=false, false, false, false, true=
+              \item[$\bigcirc$] \verb=false, false, false, true, true=
+              \item[$\bigcirc$] \verb=false, true, false, false, false=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What is the result of the following comparisons:
+          \begin{verbatim}
+'' == '0'
+0 == ''
+0 == '0' 
+false == 'false'
+false == '0'
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb=false,true,true,false,true=
+              \item[$\bigcirc$] \verb=false,false,true,false,true=
+              \item[$\bigcirc$] \verb=false,false,true,false,false=
+              \item[$\bigcirc$] \verb=true,false,true,false,true=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In Javascript (Firefox) quale e' il risultato delle seguenti operazioni?
+          \begin{verbatim}
+[]+[]
++[]
+[1,2,3]+[] 
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb="" 0 "1,2,3"=
+              \item[$\bigcirc$] \verb=Syntax Error Syntax Error Syntax Error=
+              \item[$\bigcirc$] \verb=0 0 1,2,3=
+              \item[$\bigcirc$] \verb=NaN 0 1,2,3=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In Javascript (Firefox) quale e' il risultato delle seguenti operazioni?
+          \begin{verbatim}
+{}+[]
+[]+{}
++[]+{} 
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb=0 [object Object] 0[object Object]=
+              \item[$\bigcirc$] \verb=Syntax Error Syntax Error Syntax Error=
+              \item[$\bigcirc$] \verb=NaN NaN NaN=
+              \item[$\bigcirc$] \verb=0 NaN NaN=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item In Javascript (Firefox) quale e' il risultato delle seguenti operazioni?
+          \begin{verbatim}
+Array(5).join("bat"+1)
+Array(5).join("bat"-1)
+\end{verbatim}
+          \begin{itemize}
+              \item[$\bigcirc$] \verb="bat1bat1bat1bat1" "NaNNaNNaNNaN"=
+              \item[$\bigcirc$] \verb="bat1bat1bat1bat1bat1" "batNaNNaNNaNNaN"=
+              \item[$\bigcirc$]
+                    \begin{verbatim}
+"bat1bat1bat1bat1bat1"
+"bat-1bat-1bat-1bat-1bat-1"
+\end{verbatim}
+              \item[$\bigcirc$] \verb=Syntax Error Syntax Error=
+              \item[$\bigcirc$] \verb=Nessuna delle precedenti=
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item What is the function of action jsp:setProperty?
+          \begin{itemize}
+              \item[$\bigcirc$] It sets the properties of an existing bean
+              \item[$\bigcirc$] It defines the properties of JSP page
+              \item[$\bigcirc$] t specifies the properties of the JSP engine
+              \item[$\bigcirc$] None of the others
+          \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Suppose there is a JSP page, include.jsp, that has an instance variable "String var1". This page isstatically included in another JSP page, home.jsp, which also has an instance variable "String var1"declared. What would happen when the home.jsp page is requested by a client?
+          \begin{itemize}
+              \item[$\bigcirc$] None of the others
+              \item[$\bigcirc$] Suppose there is a JSP page, include.jsp, that has an instance variable"String var1". This page is statically included in another JSP page, home.jsp, which also has aninstance variable "String var1" declared. What would happen when the home.jsp page is requestedby a client?
+              \item[$\bigcirc$] It will be a runtime error since two variables with the same name cannotcoexist
+              \item[$\bigcirc$] t will be loaded successfully
+          \end{itemize}
+\end{itemize}
+\end{document}
