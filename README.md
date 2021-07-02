@@ -20,8 +20,8 @@ This repo contains material about the following course:
 
 You can find the following material in the repo:
 
-* Codici/ - Code made during labs.
-* Domande/ - Collection of old exam multiple choice answers.
+* lab/ - Code made during labs.
+* questions/ - Collection of old exam multiple choice answers.
 
 ## Mirrors
 
